@@ -3,7 +3,7 @@
 //  HudDemo
 //
 //  Created by 1860 on 16/8/24.
-//  Copyright © 2016年 Qu Fanrong. All rights reserved.
+//  Copyright © 2016年 FanrongQu. All rights reserved.
 //
 
 #import "MBProgressHUD.h"
@@ -57,6 +57,30 @@
  *  @return MBProgressHUD对象
  */
 + (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title detailsTitle:(NSString *)detailTitle contentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
+
+/**
+ *  带有活动指示器的HUD
+ *
+ *  @param text            标题
+ *  @param detailText      副标题
+ *  @param progressHUDMode 指示器类型
+ *  @param view            显示的view
+ *
+ *  @return MBProgressHUD对象
+ */
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title detailsTitle:(NSString *)detailTitle progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
+
+/**
+ *  带有活动指示器的HUD
+ *
+ *  @param text            标题
+ *  @param detailText      副标题
+ *  @param progressHUDMode 指示器类型
+ *
+ *  @return MBProgressHUD对象
+ */
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title detailsTitle:(NSString *)detailTitle progressHUDMode:(MBProgressHUDMode)progressHUDMode;
+
 /**
  *  带有活动指示器的HUD
  *
@@ -68,42 +92,27 @@
  *  @return MBProgressHUD对象
  */
 + (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title contentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
+
 /**
  *  带有活动指示器的HUD
  *
- *  @param color           颜色
+ *  @param text            标题
  *  @param progressHUDMode 指示器类型
  *  @param view            显示的view
  *
  *  @return MBProgressHUD对象
  */
-+ (MBProgressHUD *)showActivityIndicatorWithContentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
+
 /**
  *  带有活动指示器的HUD
  *
- *  @param progressHUDMode 指示器类型
- *  @param view            显示的view
- *
- *  @return MBProgressHUD对象
- */
-+ (MBProgressHUD *)showActivityIndicatorWithProgressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view;
-/**
- *  带有活动指示器的HUD
- *
- *  @param color           颜色
+ *  @param text            标题
  *  @param progressHUDMode 指示器类型
  *
  *  @return MBProgressHUD对象
  */
-+ (MBProgressHUD *)showActivityIndicatorWithContentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode;
-/**
- *  带有活动指示器的HUD
- *
- *  @param progressHUDMode 指示器类型
- *
- *  @return MBProgressHUD对象
- */
-+ (MBProgressHUD *)showActivityIndicatorWithProgressHUDMode:(MBProgressHUDMode)progressHUDMode;
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title progressHUDMode:(MBProgressHUDMode)progressHUDMode;
 
 #pragma mark - 提示状态
 

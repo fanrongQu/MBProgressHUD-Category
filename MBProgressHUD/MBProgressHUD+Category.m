@@ -3,7 +3,7 @@
 //  HudDemo
 //
 //  Created by 1860 on 16/8/24.
-//  Copyright © 2016年 Qu Fanrong. All rights reserved.
+//  Copyright © 2016年 FanrongQu. All rights reserved.
 //
 
 #import "MBProgressHUD+Category.h"
@@ -87,26 +87,28 @@
     return [self showTitle:title detailsLabel:detailTitle contentColor:color progressHUDMode:progressHUDMode inView:view];
 }
 
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title detailsTitle:(NSString *)detailTitle progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view {
+    return [self showActivityIndicatorWithTitle:title detailsTitle:detailTitle contentColor:[UIColor blackColor] progressHUDMode:progressHUDMode inView:view];
+}
+
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title detailsTitle:(NSString *)detailTitle progressHUDMode:(MBProgressHUDMode)progressHUDMode {
+    return [self showActivityIndicatorWithTitle:title detailsTitle:detailTitle progressHUDMode:progressHUDMode inView:nil];
+}
+
 + (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title contentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view {
     return [self showActivityIndicatorWithTitle:title detailsTitle:nil contentColor:color progressHUDMode:progressHUDMode inView:view];
 }
 
-+ (MBProgressHUD *)showActivityIndicatorWithContentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view {
-    return [self showActivityIndicatorWithTitle:nil contentColor:color progressHUDMode:progressHUDMode inView:view];
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title progressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view {
+    return [self showActivityIndicatorWithTitle:title detailsTitle:nil progressHUDMode:progressHUDMode inView:view];
 }
 
-+ (MBProgressHUD *)showActivityIndicatorWithProgressHUDMode:(MBProgressHUDMode)progressHUDMode inView:(UIView *)view {
-    return [self showActivityIndicatorWithContentColor:[UIColor blackColor] progressHUDMode:progressHUDMode inView:view];
++ (MBProgressHUD *)showActivityIndicatorWithTitle:(NSString *)title progressHUDMode:(MBProgressHUDMode)progressHUDMode {
+    return [self showActivityIndicatorWithTitle:title progressHUDMode:progressHUDMode inView:nil];
 }
 
 
-+ (MBProgressHUD *)showActivityIndicatorWithContentColor:(UIColor *)color progressHUDMode:(MBProgressHUDMode)progressHUDMode {
-    return [self showActivityIndicatorWithContentColor:color progressHUDMode:progressHUDMode inView:nil];
-}
 
-+ (MBProgressHUD *)showActivityIndicatorWithProgressHUDMode:(MBProgressHUDMode)progressHUDMode {
-    return [self showActivityIndicatorWithContentColor:[UIColor blackColor] progressHUDMode:progressHUDMode inView:nil];
-}
 
 /**
  *  带有进度的需要设置
